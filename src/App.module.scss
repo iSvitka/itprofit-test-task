@@ -1,0 +1,59 @@
+@import './variables.scss';
+
+.App {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+
+    min-width: 100vw;
+    min-height: 100vh;
+
+    background-color: $color-bg-main;
+}
+
+.Header {
+    padding: 15px;
+
+    font-family: $font-sometype;
+    font-weight: 700;
+    font-size: 32px;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    &Span {
+        color: $color-main;
+    }
+}
+
+.Main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+
+    &ModalButton {
+        width: 100%;
+        
+        padding: 15px;
+
+        border: 1px solid transparent;
+        border-radius: 5px;
+
+        background-color: $color-sub;
+        color: $color-bg-main;
+        font-family: $font-sometype;
+
+        cursor: pointer;
+        transition: all .15s linear;
+
+        &:hover {
+            border-color: $color-sub;
+
+            background-color: $color-bg-main;
+            color: $color-sub;
+        }
+    }
+}
