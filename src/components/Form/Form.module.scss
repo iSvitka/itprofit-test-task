@@ -1,0 +1,183 @@
+@import '../../variables.scss';
+
+.Form {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 25px;
+
+    padding: 10px 25px;
+
+    border-radius: 5px;
+    
+    background-color: $color-bg-sub;
+
+    &Input {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 400px;
+        height: 50px;
+
+        padding: 0 15px;
+
+        border: 1px solid transparent;
+        border-radius: 5px;
+
+        background-color: $color-bg-main;
+        font-family: $font-sometype;
+        font-size: 18px;
+
+        transition: all .15s ease-in-out;
+
+        &Wrapper {
+            position: relative;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &Error {
+            border: 1px solid $color-error;
+
+            &Span {
+                position: absolute;
+                bottom: -20px;
+
+                font-family: $font-sometype;
+            }
+        }
+    }
+
+    &Textarea {
+        overflow-y: auto;
+        scroll-behavior: smooth;
+        scrollbar-gutter: stable both-edges;
+
+        width: 400px;
+        height: 150px;
+        resize: none;
+
+        padding: 5px;
+
+        border: 1px solid transparent;
+        border-radius: 5px;
+        
+        background-color: $color-bg-main;
+        font-family: $font-sometype;
+        font-size: 18px;
+        
+        transition: all .15s ease-in-out;
+
+        &::-webkit-scrollbar {
+            appearance: none;
+
+            width: 10px;
+        }
+        &::-webkit-scrollbar-track {
+            background-color: $color-bg-main;
+        }
+        &::-webkit-scrollbar-thumb {
+            border-radius: 5px;
+
+            background-color: $color-sub;
+        }
+
+        &Wrapper {
+            position: relative;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &Error {
+            border: 1px solid $color-error;
+
+            &Span {
+                position: absolute;
+                bottom: -20px;
+
+                font-family: $font-sometype;
+            }
+        }
+    }
+
+    &ButtonSubmit {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        padding: 10px 15px;
+
+        border: 1px solid transparent;
+        border-radius: 5px;
+
+        background-color: $color-sub;
+        color: $color-bg-sub;
+        font-family: $font-sometype;
+        font-size: 16px;
+        font-weight: 600;
+        text-transform: uppercase;
+
+        cursor: pointer;
+        
+        transition: all .1s ease-in-out;
+
+        &:hover {
+            border-color: $color-sub;
+
+            background-color: $color-bg-sub;
+            color: $color-sub;
+        }
+    }
+
+    &Overlay {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        border-radius: 5px;
+
+        background-color: rgba($color-sub, 0.8);
+        color: $color-bg-main;
+        font-family: $font-sometype;
+        font-size: 20px;
+
+        animation: openOverlay .5s linear both;
+
+        &Closing {
+            animation: closeOverlay .5s linear both;
+        }
+    }
+}
+
+@keyframes openOverlay {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes closeOverlay {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}

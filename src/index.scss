@@ -1,0 +1,67 @@
+@import './variables.scss';
+
+*, *::after, *::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+button, input, textarea {
+    border: none;
+    outline: none;
+
+    &::-webkit-scrollbar {
+        appearance: none;
+
+        width: 10px;
+    }
+    &::-webkit-scrollbar-track {
+        background-color: $color-bg-main;
+    }
+    &::-webkit-scrollbar-thumb {
+        border-radius: 5px;
+
+        background-color: $color-sub;
+    }
+}
+
+html, body {
+    position: relative;
+
+    &::-webkit-scrollbar {
+        appearance: none;
+
+        width: 10px;
+    }
+    &::-webkit-scrollbar-track {
+        background-color: $color-bg-main;
+    }
+    &::-webkit-scrollbar-thumb {
+        border-radius: 5px;
+
+        background-color: $color-sub;
+    }
+}
+
+#root {
+    overflow-x: hidden;
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar {
+        appearance: none;
+
+        width: 10px;
+    }
+    &::-webkit-scrollbar-track {
+        background-color: $color-bg-main;
+    }
+    &::-webkit-scrollbar-thumb {
+        border-radius: 5px;
+
+        background-color: $color-sub;
+    }
+}

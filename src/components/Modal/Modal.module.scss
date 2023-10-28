@@ -1,0 +1,129 @@
+@import '../../variables.scss';
+
+.Modal {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgba($color-sub, .5);
+
+    animation: openModal .15s ease-in both;
+
+    &Closing {
+        animation: closeModal .15s ease-out both;
+    }
+    
+    &Content {
+        position: relative;
+        overflow-x: hidden;
+        overflow-y: auto;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        gap: 25px;
+        
+        width: 500px;
+        max-height: 75vh;
+
+        padding: 10px;
+
+        background-color: $color-bg-sub;
+        
+        border-radius: 5px;
+
+        scrollbar-gutter: stable both-edges;
+
+        &::-webkit-scrollbar {
+            appearance: none;
+    
+            width: 10px;
+        }
+        &::-webkit-scrollbar-track {
+            background-color: $color-bg-sub;
+        }
+        &::-webkit-scrollbar-thumb {
+            border-radius: 5px;
+    
+            background-color: $color-sub;
+        }
+    }
+
+    &Title {
+        color: $color-sub;
+        font-family: $font-sometype;
+        font-weight: 700;
+    }
+
+    &Text {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+
+        color: $color-sub;
+        font-family: $font-sometype;
+        font-size: 16px;
+
+        &Wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+    }
+
+    &Button {
+        position: absolute;
+        top: -40px;
+        right: -40px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        height: 35px;
+        width: 35px;
+
+        border-radius: 50%;
+
+        background-color: $color-sub;
+
+        color: $color-bg-main;
+        font-family: $font-sometype;
+        font-weight: 700;
+
+        cursor: pointer;
+
+        transition: all .15s linear;
+
+        &:hover {
+            background: $color-bg-sub;
+            color: $color-sub;
+        }
+    }
+}
+
+@keyframes openModal {
+    from {
+        opacity: 0;
+    } to {
+        opacity: 1;
+    }
+}
+
+@keyframes closeModal {
+    from {
+        opacity: 1;
+    } to {
+        opacity: 0;
+    }
+}
