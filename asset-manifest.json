@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/itprofit-test-task/static/css/main.66b916e1.css",
+    "main.css": "/itprofit-test-task/static/css/main.1407f10b.css",
     "main.js": "/itprofit-test-task/static/js/main.e584cba3.js",
     "static/media/axios.cjs": "/itprofit-test-task/static/media/axios.b2798fd764a875f97f44.cjs",
     "static/media/telegram-icon.svg": "/itprofit-test-task/static/media/telegram-icon.24d175fe2229affa574a0845b7b0e125.svg",
     "static/media/gmail-icon.svg": "/itprofit-test-task/static/media/gmail-icon.7bf1a224482e8512d458c00bdc0d728a.svg",
     "static/media/github-icon.svg": "/itprofit-test-task/static/media/github-icon.6fa18895f6e6c7772cab7049f7e05f59.svg",
     "index.html": "/itprofit-test-task/index.html",
-    "main.66b916e1.css.map": "/itprofit-test-task/static/css/main.66b916e1.css.map",
+    "main.1407f10b.css.map": "/itprofit-test-task/static/css/main.1407f10b.css.map",
     "main.e584cba3.js.map": "/itprofit-test-task/static/js/main.e584cba3.js.map"
   },
   "entrypoints": [
-    "static/css/main.66b916e1.css",
+    "static/css/main.1407f10b.css",
     "static/js/main.e584cba3.js"
   ]
 }
